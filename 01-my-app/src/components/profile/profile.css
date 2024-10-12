@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.person-card {
+  display: inline-block;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 0.7rem; /* Kenarları yuvarladık */
+  width: 200px;
+  font-family: "Roboto", sans-serif; /* @import ederek ekledik */
+}
+
+.person-bg {
+  height: 10rem;
+  background-size: cover;
+  background-position: center center; /* resmi merkeze ekledik */
+  background-repeat: no-repeat; /* resim küçükse kendini tekrarlamasın diye ekledik */
+  border-radius: 0.7rem 0.7rem 0 0; /* yuvarlaklık yukarılarda var ama altta olmadığı için 0 0 verdik.. */
+  position: relative; /* resmin pozisyonunu değiştirdik */
+}
+
+.person-bg-transparent {
+  background-color: rgba(255, 0, 0, 0.5);
+  position: absolute; /* resmin pozisyonunu değiştirdik */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.person-content {
+  padding: 0 1rem 0rem 1rem;
+  text-align: center;
+  position: relative;
+  top: -50px;
+  z-index: 11;
+  /* kırmızılı resmin önüne çıkarabilmek için 10 dan büyük 
+     bir değer vermiş olduk */
+}
+
+.person-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.603);
+}
+
+.person-content h3 {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.person-content h6 {
+  color: gray;
+  margin: 0;
+}
+
+.person-stat {
+  margin-top: 1rem;
+  display: flex; /* yanyana gelsinler diye bunu ekledik */
+  justify-content: space-between; /* yazıların arasını eşit ölçüde açar */
+}
+
+.person-stat div {
+  font-size: 1.5rem;
+}
+
+.person-stat span {
+  display: block;
+  font-size: 0.8rem;
+}
